@@ -4,9 +4,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <script src="https://kit.fontawesome.com/27e27cc256.js" crossorigin="anonymous"></script>
+    <title>Shahid Ali -A web developer</title>
 </head>
 <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <span class="logo">Shahid</span>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi , I'am <span>Shahid</span><br> Ali from India</h1>
+            </div>
+        </div>
+    </div>
+        <!-----------About--------------------------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./images/user.png" alt="me">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut perferendis laborum ab et dignissimos, voluptatibus adipisci at architecto unde, quasi sed perspiciatis repellat tempora porro dolorem explicabo! Repudiandae, illum omnis.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app development</li>
+                                <li><span>Front End</span><br>HTML ,CSS , Js ,React Js</li>
+                                <li><span>Back End</span><br>Node ,Express , MongoDb</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>None</span><br>none</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020 - 2023</span><br>B.tech in ECE from H.E.T.C Hooghly</li>
+                                <li><span>2016 - 2020</span><br>Diploma in ETC from R.K.M.S Belghoria</li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!--------------------SERVICE----------------------------------->
+      <div id="services">
+        <div class="container">
+         <h1 class="sub-title">My Services</h1>
+          <div class="services-lists">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, fugiat impedit? Sequi laborum eaque reiciendis vitae quisquam sed, cupiditate doloremque porro quam at eos fuga sint molestiae quos delectus maiores?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-wordpress"></i>
+                <h2>Word Press</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, fugiat impedit? Sequi laborum eaque reiciendis vitae quisquam sed, cupiditate doloremque porro quam at eos fuga sint molestiae quos delectus maiores?</p>
+                <a href="#">Learn More</a>
+            </div>
+          </div> 
+
+        </div>
+      </div>
+
+
+
+
+     <!------------service end-->
+
+     <!------------Contact---------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+           <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><a href="mailto:shahid451998@gmail.com">shahid451998@gmail.com</a></p>
+            <p>+91-7908169084</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/sahid.khan.9022662" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/shaid-7908" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a> 
+            </div>
+           </div>
+           <div class="contact-right"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+     <!---------Contact End-->
+
     
+    <script>
+   var tablinks=document.getElementsByClassName('tab-links'); 
+   var tabcontents=document.getElementsByClassName('tab-contents');
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove('active-links')
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove('active-tab')
+        }
+        event.currentTarget.classList.add('active-links')
+        document.getElementById(tabname).classList.add('active-tab')
+    } 
+
+    </script>
 </body>
 </html>
